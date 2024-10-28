@@ -5,48 +5,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" type="image/x-icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='bx bx-code-alt'><path d='M16 18l6-6-6-6M8 6l-6 6 6 6'></path></svg>">
-
-    <title>Início</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <title>Sobre - Pedro</title>
 </head>
 
 <body>
     <header class="header">
         <a href="#" class="logo">Pedro</a>
-        <nav class="navbar">
-            <a href="index.html" class="active">Início <i class='bx bxs-home-alt-2'></i></a>
-            <a href="https://github.com/psilvagg" target="_blank">GitHub <i class='bx bxl-github'></i></a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pedro.silva.araujo@outlook.com"
-                target="_blank">Contato <i class='bx bxs-envelope'></i></a>
-        </nav>
     </header>
 
-    <section class="home">
+    <section id="home" class="home">
         <div class="home-content">
-            <h1>Meu nome é Pedro</h1>
-            <h3>Back-End Developer</h3>
-            <p>Atualmente, estou cursando Técnico em Desenvolvimento de Sistemas e possuo
-                conhecimentos nas linguagens C e Java. No momento, estou me aprofundando em
-                HTML, CSS e JavaScript, além de estudar Python para aprimorar minha expertise em
-                automação de processos.</p>
+            <h1>Olá, eu sou Pedro</h1>
+            <h3>Desenvolvedor Back-End</h3>
+            <p>Sou estudante de Técnico em Desenvolvimento de Sistemas, com uma sólida base em linguagens de programação
+                como C, Java e PHP. Estou sempre em busca de novos desafios e oportunidades para aplicar e desenvolver
+                minhas habilidades.</p>
             <div class="btn-box">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pedro.silva.araujo@outlook.com"
-                    target="_blank">Contrate-me</a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pedro.silva.araujo@outlook.com"
-                    target="_blank">Fale Comigo</a>
+                <a href="#footer">Entre em Contato</a>
             </div>
-        </div>
-
-        <div class="home-sci">
-            <a href="https://linkedin.com/in/pedro-araujo-bba449315"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/psilvagg" target="_blank"><i class='bx bxl-github'></i></a>
-            <a href="https://www.instagram.com/psilva.gg/" target="_blank"><i class='bx bxl-instagram'></i></a>
         </div>
     </section>
 
+    <section class="projects">
+        <h2>Meus Projetos</h2>
+        <a href="https://github.com/psilvagg" target="_blank" class="github-button">
+            <i class='bx bxl-github'></i> GitHub
+        </a>
+        <br><br><br>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                    <h3>Cable Mapping <span
+                            style="color: green; font-size: 0.9em; font-weight: normal;">(Concluído)</span></h3>
+                    <p>
+                        Mapeamento de Cabos é uma aplicação que facilita o gerenciamento de caminhos de cabos em
+                        ambientes corporativos, permitindo que os administradores registrem informações essenciais, como
+                        pontos de conexão, racks e salas. Desenvolvida em C, a interface é
+                        intuitiva e responsiva, proporcionando uma experiência de usuário eficiente.
+                        <br> <a href="https://github.com/psilvagg/Cable-Mapping" target="_blank">Saiba mais sobre o
+                            projeto aqui</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                    <h3>Minhas Vacinas <span style="color: red; font-size: 0.9em; font-weight: normal;">(Em
+                            Desenvolvimento)</span></h3>
+                    <p>Minhas Vacinas é uma plataforma que promove a conscientização sobre a vacinação, permitindo que
+                        os usuários gerenciem seu histórico de vacinas e acessem informações atualizadas. Utilizando
+                        PHP, MySQL e Bootstrap, oferecemos uma aplicação responsiva e intuitiva.<br> <a
+                            href="https://vacinas.agenci.one" target="_blank">Saiba mais sobre o projeto
+                            aqui</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <h2>Entre em Contato</h2>
+            <form id="contact-form" action="assets/contato.php" method="POST">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" class="form-control" required></textarea>
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            </form>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="responseModal" tabindex="-1" role="dialog" aria-labelledby="responseModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="responseModalLabel">Resposta do Formulário</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
 </body>
 
 </html>
